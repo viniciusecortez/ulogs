@@ -5,4 +5,4 @@ class TopicForms(forms.ModelForm):
     text = forms.CharField(widget=forms.Textarea)
     class Meta:
         models = Topic
-    
+

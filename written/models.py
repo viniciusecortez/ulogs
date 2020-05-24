@@ -19,8 +19,8 @@ class DailyKnown(models.Model):
         verbose_name_plural = _("DailyKnowns")
 
     def __str__(self):
-        return f"{self.title} - {self.date.strftime('%Y-%m-%d')}"    
+        return f"{self.title} - {self.date.strftime('%Y-%m-%d')}"
 
 class Topic(models.Model):
-    text = models.CharField(max_length=1000)
+    text = models.TextField(max_length=1000)
     day = models.ForeignKey(DailyKnown, on_delete=models.PROTECT, related_name='topics')
